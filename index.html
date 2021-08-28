@@ -1,20 +1,134 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>cv-demo-05282021</title>
-    <link href="css/app.2efbb19a.css" rel="preload" as="style">
-    <link href="js/app.b88324b0.js" rel="preload" as="script">
-    <link href="js/chunk-vendors.8e959ed8.js" rel="preload" as="script">
-    <link href="css/app.2efbb19a.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-Demo-26082021</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<noscript><strong>We're sorry but cv-demo-05282021 doesn't work properly without JavaScript enabled. Please enable it to
-    continue.</strong></noscript>
-<div id="app"></div>
-<script src="js/chunk-vendors.8e959ed8.js"></script>
-<script src="js/app.b88324b0.js"></script>
+    <div class="wrapper">
+        <h1 class="title">CV-DEMO #26082021</h1>
+
+        <form class="form">
+            <h2 class="form__title">Two-way binding challenge</h2>
+            <div class="form__input-container">
+                <select class="js-country-code form__input" name="countryCode">
+                    <option value="DK">DK</option>
+                    <option value="DE">DE</option>
+                    <option value="NO">NO</option>
+                    <option value="IS">IS</option>
+                    <option value="EN">EN</option>
+                    <option value="ES">ES</option>
+                    <option value="RU">RU</option>
+                    <option value="UA">UA</option>
+                    <option value="BE">BE</option>
+                </select>
+                <input class="js-zip-code-input form__input" type="text">
+            </div>
+
+            <div class="form__input-container">
+                <input class="js-phone-code form__input"
+                       type="text" name="phoneCode" disabled>
+                <input class="js-phone-number form__input"
+                       type="text" name="phoneNumber">
+            </div>
+        </form>
+
+        <span class="author">&copy; Eugene Bondarenko | 2021</span>
+    </div>
+
+<script>
+    const countries = [
+        {
+            id: '0',
+            countryCode: 'DK',
+            phoneCode: '+45',
+            phoneLength: 8,
+            hasNoSpaces: true
+        },
+        {
+            id: '1',
+            countryCode: 'DE',
+            phoneCode: '+49',
+            phoneLength: 12,
+            hasNoSpaces: true
+        },
+        {
+            id: '2',
+            countryCode: 'NO',
+            phoneCode: '+47',
+            phoneLength: 8,
+            hasNoSpaces: true
+        },
+        {
+            id: '3',
+            countryCode: 'IS',
+            phoneCode: '+354',
+            phoneLength: 7,
+            hasNoSpaces: true
+        },
+        {
+            id: '4',
+            countryCode: 'EN',
+            phoneCode: '+44',
+            phoneLength: 11
+        },
+        {
+            id: '5',
+            countryCode: 'ES',
+            phoneCode: '+34',
+            phoneLength: 9
+        },
+        {
+            id: '6',
+            countryCode: 'RU',
+            phoneCode: '+7',
+            phoneLength: 10
+        },
+        {
+            id: '7',
+            countryCode: 'UA',
+            phoneCode: '+380',
+            phoneLength: 9
+        },
+        {
+            id: '8',
+            countryCode: 'BE',
+            phoneCode: '+32',
+            phoneLength: 10
+        },
+    ];
+    const countryCodeInput = document.querySelector('.js-country-code');
+    const zipCodeInput = document.querySelector('.js-zip-code-input');
+    const phoneCodeInput = document.querySelector('.js-phone-code');
+    const phoneNumberInput = document.querySelector('.js-phone-number');
+
+    let selectedCode = countryCodeInput.value;
+    let currentCountry = countries.find(o => o.countryCode === selectedCode);
+
+    phoneCodeInput.value = currentCountry.phoneCode;
+
+    countryCodeInput.addEventListener('change', () => {
+        selectedCode = countryCodeInput.value;
+        currentCountry = countries.find(o => o.countryCode === selectedCode);
+        phoneCodeInput.value = currentCountry.phoneCode;
+        phoneNumberInput.value = '';
+    });
+
+    zipCodeInput.addEventListener('keydown', (event) => {
+        if (currentCountry.hasNoSpaces && event.keyCode === 32) {
+            event.preventDefault();
+        }
+    });
+
+    phoneNumberInput.addEventListener('keydown', (event) => {
+        if (phoneNumberInput.value.length >= currentCountry.phoneLength && event.keyCode !== 8) {
+            event.preventDefault();
+        }
+    });
+
+</script>
+
 </body>
 </html>
