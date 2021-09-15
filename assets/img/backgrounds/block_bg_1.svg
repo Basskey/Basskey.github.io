@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="255px" height="255px" viewBox="0 0 255 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 36</title>
+    <defs>
+        <linearGradient x1="50%" y1="0.751201923%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#99A2AD" offset="0%"></stop>
+            <stop stop-color="#E6EBEF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-48.0418703%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#99A2AD" offset="0%"></stop>
+            <stop stop-color="#E6EBEF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="site_1.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.200000003">
+        <g id="Medium-Devices:-Tablets---6-col-Copy-2" transform="translate(-24.000000, -1069.000000)">
+            <g id="3" transform="translate(24.000000, 1012.000000)">
+                <g id="Group-36" transform="translate(0.000000, 57.000000)">
+                    <path d="M255,127.5 C255,197.916565 197.916565,255 127.5,255 C57.0834354,255 0,197.916565 0,127.5 C0,57.0834354 57.0834354,0 127.5,0 C197.916565,0 255,57.0834354 255,127.5 Z" id="Path" fill="url(#linearGradient-1)" opacity="0.198986235"></path>
+                    <path d="M193.611111,127.5 C193.611111,164.011909 164.011909,193.611111 127.5,193.611111 C90.9880912,193.611111 61.3888889,164.011909 61.3888889,127.5 C61.3888889,90.9880912 90.9880912,61.3888889 127.5,61.3888889 C164.011909,61.3888889 193.611111,90.9880912 193.611111,127.5 Z" id="Path" fill="url(#linearGradient-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

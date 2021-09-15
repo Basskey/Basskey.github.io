@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow_down</title>
+    <g id="site_1.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="catalog_catecory_1.0-copy-7" transform="translate(-1244.000000, -46.000000)" fill="#1A3F5E" fill-rule="nonzero">
+            <g id="header_menu" transform="translate(654.000000, 26.000000)">
+                <g id="Group-16-Copy-4" transform="translate(505.000000, 0.000000)">
+                    <g id="arrow_down" transform="translate(90.500000, 24.500000) rotate(-270.000000) translate(-90.500000, -24.500000) translate(86.000000, 19.000000)">
+                        <path d="M7.65075556,4.47084444 L1.5512,0.295111111 C1.26951111,0.102133333 0.985688889,0 0.749777778,0 C0.293688889,0 0.0115555556,0.366044444 0.0115555556,0.978755556 L0.0115555556,10.0037333 C0.0115555556,10.6157333 0.293333333,10.9810667 0.748355556,10.9810667 C0.984622222,10.9810667 1.26391111,10.8788444 1.54622222,10.6853333 L7.64862222,6.50968889 C8.04106667,6.24071111 8.25840003,5.87875556 8.25840003,5.49004444 C8.25848889,5.1016 8.04364444,4.73973333 7.65075556,4.47084444 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

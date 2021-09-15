@@ -2,133 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>cv-demo-14092021</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV-Demo-26082021</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h1 class="title">CV-DEMO #26082021</h1>
-
-        <form class="form">
-            <h2 class="form__title">Two-way binding challenge</h2>
-            <div class="form__input-container">
-                <select class="js-country-code form__input" name="countryCode">
-                    <option value="DK">DK</option>
-                    <option value="DE">DE</option>
-                    <option value="NO">NO</option>
-                    <option value="IS">IS</option>
-                    <option value="EN">EN</option>
-                    <option value="ES">ES</option>
-                    <option value="RU">RU</option>
-                    <option value="UA">UA</option>
-                    <option value="BE">BE</option>
-                </select>
-                <input class="js-zip-code-input form__input" type="text">
-            </div>
-
-            <div class="form__input-container">
-                <input class="js-phone-code form__input"
-                       type="text" name="phoneCode" disabled>
-                <input class="js-phone-number form__input"
-                       type="text" name="phoneNumber">
-            </div>
-        </form>
-
-        <span class="author">&copy; Eugene Bondarenko | 2021</span>
+    <div class="header">
+        <a href="#" class="logo">
+            <img src="assets/img/mapklap_logo.svg" alt="MapKlap logo">
+        </a>
+        <ul class="header__menu">
+            <li class="header__menu-item"><a href="#">Каталог</a></li>
+            <li class="header__menu-item"><a href="#">Скачать приложение</a></li>
+            <li class="header__menu-item header__menu-item--has-border"><a href="#">Войти</a></li>
+            <li class="header__menu-item header__menu-item--dropdown">
+                <div class="language">
+                    <img src="assets/img/248-russia.svg" alt=""><span>Рус</span>
+                </div>
+            </li>
+        </ul>
+        <div class="header__menu-trigger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
+    <div class="wrapper">
+        <section class="intro">
+            <img class="intro__picture" src="assets/img/illustrations/main1-min.png" alt="">
+            <div class="container">
+                <h1 class="intro__title">Открой&nbsp;для&nbsp;себя мир&nbsp;полный&nbsp;путешествий и&nbsp;классных&nbsp;людей</h1>
+                <hr class="separator" />
+                <span class="intro__description">Путешествуй, сохраняй маршруты, будь частью крутого сообщества</span>
+                <div class="get-app">
+                    <div class="get-app__item">
+                        <span class="get-app__item-note">Доступно</span>
+                        <a href="#" class="get-app__link">
+                            <img src="assets/img/apple_btn.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="get-app__item">
+                        <span class="get-app__item-note">Скоро в</span>
+                        <a href="#" class="get-app__link get-app__link--disabled">
+                            <img src="assets/img/goole_btn_inactive.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="card">
+                <h2 class="card__title">События</h2>
+                <p class="card__description">
+                    Создавай события и приглашай других пользователей
+                </p>
+                <hr class="separator">
+                <img class="card__picture" src="assets/img/illustrations/sobitia-min.png" alt="">
+            </div>
 
-<script>
-    const countries = [
-        {
-            id: '0',
-            countryCode: 'DK',
-            phoneCode: '+45',
-            phoneLength: 8,
-            hasNoSpaces: true
-        },
-        {
-            id: '1',
-            countryCode: 'DE',
-            phoneCode: '+49',
-            phoneLength: 12,
-            hasNoSpaces: true
-        },
-        {
-            id: '2',
-            countryCode: 'NO',
-            phoneCode: '+47',
-            phoneLength: 8,
-            hasNoSpaces: true
-        },
-        {
-            id: '3',
-            countryCode: 'IS',
-            phoneCode: '+354',
-            phoneLength: 7,
-            hasNoSpaces: true
-        },
-        {
-            id: '4',
-            countryCode: 'EN',
-            phoneCode: '+44',
-            phoneLength: 11
-        },
-        {
-            id: '5',
-            countryCode: 'ES',
-            phoneCode: '+34',
-            phoneLength: 9
-        },
-        {
-            id: '6',
-            countryCode: 'RU',
-            phoneCode: '+7',
-            phoneLength: 10
-        },
-        {
-            id: '7',
-            countryCode: 'UA',
-            phoneCode: '+380',
-            phoneLength: 9
-        },
-        {
-            id: '8',
-            countryCode: 'BE',
-            phoneCode: '+32',
-            phoneLength: 10
-        },
-    ];
-    const countryCodeInput = document.querySelector('.js-country-code');
-    const zipCodeInput = document.querySelector('.js-zip-code-input');
-    const phoneCodeInput = document.querySelector('.js-phone-code');
-    const phoneNumberInput = document.querySelector('.js-phone-number');
+            <div class="card">
+                <div class="container">
+                    <h2 class="card__title">Запись маршрутов</h2>
+                    <p class="card__description">
+                        Записывай свой маршрут, ставь промежуточные точки, добавляй фото и описание
+                    </p>
+                </div>
+                <img class="card__picture" src="assets/img/illustrations/marshruti2-min.png" alt="">
+            </div>
 
-    let selectedCode = countryCodeInput.value;
-    let currentCountry = countries.find(o => o.countryCode === selectedCode);
+            <div class="card">
+                <div class="container">
+                    <h2 class="card__title">Поиск по интересам</h2>
+                    <p class="card__description">
+                        Легкий поиск отдыха по интересам
+                    </p>
+                </div>
+                <img class="card__picture" src="assets/img/illustrations/interesi2-min.png" alt="">
+            </div>
 
-    phoneCodeInput.value = currentCountry.phoneCode;
+            <div class="card">
+                <div class="container">
+                    <h2 class="card__title">Умный навигатор</h2>
+                    <p class="card__description">
+                        Проложи маршрут по труднодоступным местам на разных видах транспорта
+                    </p>
+                </div>
+                <img class="card__picture" src="assets/img/illustrations/peresechennaya_mestnost-min.png" alt="">
+            </div>
 
-    countryCodeInput.addEventListener('change', () => {
-        selectedCode = countryCodeInput.value;
-        currentCountry = countries.find(o => o.countryCode === selectedCode);
-        phoneCodeInput.value = currentCountry.phoneCode;
-        phoneNumberInput.value = '';
-    });
+            <div class="card">
+                <div class="container">
+                    <h2 class="card__title">Групповые чаты</h2>
+                    <p class="card__description">
+                        Создавай собственные групповые чаты, добавляй туда любое количество людей
+                    </p>
+                </div>
+                <img class="card__picture" src="assets/img/illustrations/chati2-min.png" alt="">
+            </div>
 
-    zipCodeInput.addEventListener('keydown', (event) => {
-        if (currentCountry.hasNoSpaces && event.keyCode === 32) {
-            event.preventDefault();
-        }
-    });
+            <div class="card">
+                <h2 class="card__title">Профиль</h2>
+                <p class="card__description">
+                    Развивай свой профиль и о вас узнают другие пользователи и путешественники
+                </p>
+                <hr class="separator">
+                <img class="card__picture" src="assets/img/illustrations/profil-min.png" alt="">
+            </div>
 
-    phoneNumberInput.addEventListener('keydown', (event) => {
-        if (phoneNumberInput.value.length >= currentCountry.phoneLength && event.keyCode !== 8) {
-            event.preventDefault();
-        }
-    });
-
-</script>
-
+            <div class="bg-globe">
+                <div class="bg"></div>
+                <div class="container">
+                    <p class="get-app__description">Присоединяйся и открой для себя невероятный мир путешествий с MapKlap</p>
+                    <div class="get-app">
+                        <div class="get-app__item">
+                            <span class="get-app__item-note">Доступно</span>
+                            <a href="#" class="get-app__link">
+                                <img src="assets/img/apple_btn.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="get-app__item">
+                            <span class="get-app__item-note">Скоро в</span>
+                            <a href="#" class="get-app__link get-app__link--disabled">
+                                <img src="assets/img/goole_btn_inactive.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/img/mapklap_logo-footer.svg" alt="MapKlap logo">
+            </a>
+            <div class="social-media">
+                <a href="#" class="social-media__link">
+                    <img src="/assets/img/social-media/facebook_icon.svg" alt="">
+                </a>
+                <a href="#" class="social-media__link">
+                    <img src="/assets/img/social-media/instagram_icon.svg" alt="">
+                </a>
+                <a href="#" class="social-media__link">
+                    <img src="/assets/img/social-media/envelope_icon%20copy.svg" alt="">                </a>
+            </div>
+        </div>
+        <div class="session-counter">
+            <span class="session-counter__label">
+                Посещений сайта: <span class="sessions-counter__amount">103 402</span>
+            </span>
+        </div>
+    </div>
 </body>
 </html>
